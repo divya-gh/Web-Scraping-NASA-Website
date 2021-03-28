@@ -111,8 +111,8 @@ def scrape():
 
 
     # Save the table in HTML format
-    mars_fact_df.to_html('table.html')
-    table = mars_fact_df.to_html()
+    mars_fact_df.to_html('table.html', classes="table table-bordered border-dark table-striped")
+    table = mars_fact_df.to_html(classes="table table-bordered border-dark table-striped table-success")
     table = table.replace('\n','')
     
 
