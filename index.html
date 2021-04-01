@@ -52,7 +52,7 @@
                     <div class="card-body ">
                       <h5 class="card-text font-weight-bolder">Mars Facts</h5>
                     </div>
-                    <div class="card-body table table-responsive" >                        
+                    <div class="card-body table table-responsive align-left">                        
                             {{ mars_news.table | safe }}                         
                     </div>
                 </div>                              
@@ -71,10 +71,10 @@
             {% for data in mars_news.hemisphere_image_urls %}  
                 <div class="col-md-3 col-sm-6 col-xs-12 col-lg-3">
                     <div class='container'>
-                        <div class="card" style='border:1px solid rgb(7, 12, 14);'>
+                        <div class="card shadow" style='border:1px solid rgb(7, 12, 14);'>
                             <img class="card-img-top img-fluid responsive"  width = '100%' src="{{ data.img_url }}" alt="Hemisphere image">
                         
-                        <div class="card-body font-weight-bolder h4" style="font-family: Georgia;"> 
+                        <div class="card-body font-weight-bolder h4 " style="font-family: Georgia;"> 
                             {{ data.title }}                         
                         </div>
                         </div>
