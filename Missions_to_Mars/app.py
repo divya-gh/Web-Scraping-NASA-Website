@@ -13,16 +13,14 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     mars_news = mongo.db.news.find_one()
-    
-
     return render_template("index.html", mars_news= mars_news)
 
-
+# Call scrape function from scrape_mars.py file and load mongo DB
 @app.route("/scrape")
 def scraper():
     # create a collection
     news = mongo.db.news
-    # get data fromt the scrape_mars.py file
+    # get data from the scrape_mars.py file
     mars_data = ms.scrape()
     # Update Mongo collection with new data 
     # Note: {} - update all upsert- insert if not there or update entire collection if there
