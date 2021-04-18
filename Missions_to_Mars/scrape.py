@@ -1,4 +1,3 @@
-
 from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
@@ -111,8 +110,8 @@ def scrape():
 
 
     # Save the table in HTML format
-    mars_fact_df.to_html('table.html', classes="table table-bordered border-dark table-success table-striped align-left")
-    table = mars_fact_df.to_html(classes="table table-bordered border-dark table-success table-striped vertical-align-left")
+    mars_fact_df.to_html('table.html', classes="table table-bordered border-dark table-striped")
+    table = mars_fact_df.to_html(classes="table table-bordered border-dark table-striped table-success")
     table = table.replace('\n','')
     
 
@@ -174,5 +173,3 @@ def scrape():
                  }
 
     return mars_data
-        
-
